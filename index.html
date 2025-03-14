@@ -3,35 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laurita</title>
+    <title>For My Love</title>
+    <style>
+        :root {
+            --primary: #f8c8dc; /* Soft pink */
+            --secondary: #e6e6fa; /* Lavender */
+            --text: #4a4a4a;
+            --accent: #ff85a2;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff;
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: var(--primary);
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: white;
+            font-weight: 300;
+        }
+        
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .photo-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .photo-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .photo-container {
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        /* Applied your requested change for photo height */
+        .photo {
+            width: 100%;
+            height: 550px;
+            object-fit: cover;
+        }
+        
+        .caption {
+            padding: 15px;
+            text-align: center;
+            font-style: italic;
+            color: var(--text);
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .quote-section {
+            background-color: var(--secondary);
+            padding: 50px 30px;
+            border-radius: 20px;
+            margin-bottom: 50px;
+            text-align: center;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .quote {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+            font-weight: 500;
+        }
+        
+        .heart-divider {
+            font-size: 2rem;
+            color: var(--accent);
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            background-color: var(--primary);
+            border-radius: 30px 30px 0 0;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .photo-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .quote {
+                font-size: 1.4rem;
+            }
+            
+            .photo {
+                height: 400px; /* Slightly smaller height on mobile */
+            }
+        }
+    </style>
 </head>
-<style>
-body{
-    background-image: url('surprise.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-}
-h1.laurita{
-    text-align:center;
-    font-family:Cursive;
-    letter-spacing:2px;
-    color:white;
-    font-size: 100px;
-    text-indent: 50%;
-}
-</style>
 <body>
-<h1 class="laurita">Laurita.me</h1>
-<embed src="music.mp3" loop="true" autostart="true" hidden="true">
-</body>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0STJ83M6TL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <header>
+        <div class="container">
+            <h1>Para Meu Amor <br> Maria Clara </h1>
+            <p class="subtitle">Cada momento com você é um tesouro</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="photo-grid" id="photoGrid1">
+            <div class="photo-card">
+                <div class="photo-container">
+                    <img src="/placeholder.svg" alt="Nós juntos" class="photo random-image">
+                </div>
+                <p class="caption">Sua felicidade é a minha motivação para sorrir</p>
+            </div>
+            <div class="photo-card">
+                <div class="photo-container">
+                    <img src="/placeholder.svg" alt="Seu sorriso lindo" class="photo random-image">
+                </div>
+                <p class="caption">Seu sorriso ilumina meu dia</p>
+            </div>
+            <div class="photo-card">
+                <div class="photo-container">
+                    <img src="/placeholder.svg" alt="Momentos especiais" class="photo random-image">
+                </div>
+                <p class="caption">Com você, até os momentos mais simples se tornam especiais</p>
+            </div>
+        </div>
+        
+        <div class="quote-section">
+            <p class="quote">"Você é o melhor presente que a vida poderia me dar."</p>
+        </div>
+        
+        <div class="photo-grid" id="photoGrid2">
+            <div class="photo-card">
+                <div class="photo-container">
+                    <img src="/placeholder.svg" alt="Nós na praia" class="photo random-image">
+                </div>
+                <p class="caption">A sua risada é a melodia que alegra meu coração.</p>
+            </div>
+            <div class="photo-card">
+                <div class="photo-container">
+                    <img src="/placeholder.svg" alt="Momentos engraçados" class="photo random-image">
+                </div>
+                <p class="caption">Ao seu lado, o tempo parece passar mais devagar, como se quisesse eternizar cada segundo.</p>
+            </div>
+            <div class="photo-card">
+                <div class="photo-container">
+                    <img src="/placeholder.svg" alt="Abraço apertado" class="photo random-image">
+                </div>
+                <p class="caption">Seu abraço é meu lugar favorito</p>
+            </div>
+        </div>
+        
+        <div class="heart-divider">❤️</div>
+        
+        <div class="quote-section">
+            <p class="quote">"Cada dia ao seu lado é uma nova razão para sorrir."</p>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Com todo meu amor, hoje e sempre.</p>
+        </div>
+    </footer>
 
-  gtag('config', 'G-0STJ83M6TL');
-</script>
+    <script>
+        // Function to shuffle an array (Fisher-Yates algorithm)
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // Function to assign random images to photo elements
+        function randomizeImages() {
+            // Define the image paths (adjust the number based on how many images you have)
+            const imagePaths = [
+                'image.jpeg',
+                'image2.jpg',
+                'image3.png',
+                'image4.jpeg',
+                'image5.jpeg',
+                'image7.png',
+                'image8.jpeg',
+                'IMG_9778.jpeg',
+                'IMG_9779.jpeg'
+            ];
+            
+            // Shuffle the array of image paths
+            const shuffledImages = shuffleArray([...imagePaths]);
+            
+            // Get all image elements with the random-image class
+            const imageElements = document.querySelectorAll('.random-image');
+            
+            // Assign shuffled images to elements
+            imageElements.forEach((img, index) => {
+                // Use modulo to cycle through images if there are more elements than images
+                const imageIndex = index % shuffledImages.length;
+                img.src = shuffledImages[imageIndex];
+            });
+        }
+
+        // Run the randomization when the page loads
+        window.addEventListener('load', randomizeImages);
+        
+        // Optional: Add a button to re-randomize images
+        // Uncomment the HTML button and this code if you want this feature
+        /*
+        document.getElementById('randomizeBtn').addEventListener('click', () => {
+            randomizeImages();
+        });
+        */
+    </script>
+</body>
 </html>
