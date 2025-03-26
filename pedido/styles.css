@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom right, #fff1f2, #f5f3ff);
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.proposal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+    position: relative;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #db2777;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #ec4899;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+
+.button {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.yes-button {
+    background-color: #ec4899;
+    color: white;
+}
+
+.yes-button:hover {
+    background-color: #db2777;
+    transform: scale(1.1);
+}
+
+.no-button {
+    background-color: #6b7280;
+    color: white;
+    position: relative;
+}
+
+.heart-icon {
+    font-size: 5rem;
+    color: #db2777;
+    animation: pulse 1.5s infinite;
+}
+
+.heart {
+    position: absolute;
+    color: #db2777;
+    font-size: 1.5rem;
+    animation: float 4s ease-in infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+    
+    .subtitle {
+        font-size: 1.75rem;
+    }
+    
+    .buttons-container {
+        flex-direction: row;
+    }
+}
