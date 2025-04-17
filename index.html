@@ -151,7 +151,31 @@
     <header>
         <div class="container">
             <h1>Para Meu Amor <br> Maria Clara </h1>
+            <div id="contador" style="color: white;font-size: 20px;"></div>
             <p class="subtitle">Cada momento com você é um tesouro</p>
+
+            <script>
+              const dataInicial = new Date(2025, 1, 17, 0, 0, 0); // Fevereiro é mês 1 (janeiro = 0)
+          
+              function atualizarContador() {
+                const agora = new Date();
+                const diff = agora - dataInicial;
+          
+                const segundosTotais = Math.floor(diff / 1000);
+                const dias = Math.floor(segundosTotais / 86400);
+                const horas = Math.floor((segundosTotais % 86400) / 3600);
+                const minutos = Math.floor((segundosTotais % 3600) / 60);
+                const segundos = segundosTotais % 60;
+          
+                document.getElementById("contador").innerText =
+                  `${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos.`;
+              }
+          
+              setInterval(atualizarContador, 1000);
+              atualizarContador();
+            </script>
+
+
         </div>
     </header>
     
